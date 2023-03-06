@@ -1,5 +1,5 @@
 # Задача 26:  Напишите программу, которая на вход принимает два числа A и B,
-# и возводит число А в целую степень B с помощью рекурсии.
+# и возводит число А в целую неотрицательную степень B с помощью рекурсии.
 #
 # *Пример:*
 #
@@ -9,6 +9,8 @@
 def raise_number_to_power(number, power):
     if power == 1:
         return number
+    elif power == 0:
+        return 1
     number *= num
     return raise_number_to_power(number, power - 1)
 
